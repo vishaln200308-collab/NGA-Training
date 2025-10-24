@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Forms </h1>
+
+    <form action="/submit_form" method="post">
+        <label for="fname">First name: </label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="lname">Last name: </label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="email">Email: </label><br>
+        <input type="email" name="email" id="email"><br><br>
+
+        <label for="password">Password: </label><br>
+        <input type="password" name="password" id="password"><br><br>
+
+        <label for="gender">Gender: </label><br>
+        <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--below is a javascript for displaying form data-->
+
+    <script>
+        //optional : Display form data in console on submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); //prevent actual form submission
+            const formData = new FormData(event.target);
+            console.log('form Data');
+            for (const [name, vale] of formData) {
+                console.log('${name}: ${value}');
+            }
+            alert('Form Submitted');
+        });
+    </script>
+</body>
+</html>
