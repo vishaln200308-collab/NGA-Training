@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .student-card {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .subject-list {
+            columns: 2;
+        }
+        
+        .grade-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 3px;
+        }
+        
+        .code {
+            background: #f5f5f5;
+            padding: 2px 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <p>Demonstrating Modern JavaScript (ES6) Features</p>
+    
+    <div class="section">
+        <h2>Course Information</h2>
+        <div id="courseInfo"></div>
+    </div>
+    
+    <div class="section">
+        <h2>All Subjects</h2>
+        <div id="subjectList"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Student Details</h2>
+        <div id="studentDetails"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Student Grades</h2>
+        <div id="studentGrades"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Unique Skills</h2>
+        <div id="uniqueSkills"></div>
+    </div>
+    
+    
+
+    <script>
+        // Use of let and const
+        const instituteName = "Modern JavaScript Institute";
+        let courseName = "Advanced Web Development";
+        
+        // Use of Spread Operator
+        const coreSubjects = ["JavaScript", "HTML5", "CSS3", "Responsive Design"];
+        const advancedSubjects = ["React", "Node.js", "Database Management", "API Development"];
+        const allSubjects = [...coreSubjects, ...advancedSubjects];
+        
+        // Use of Arrow Function
+        const greet = (name) => `Welcome, ${name}! We're glad to have you at ${instituteName}.`;
+        
+        // Use of Class
+        class Student {
+            constructor(name, age, skills) {
+                this.name = name;
+                this.age = age;
+                this.skills = skills;
+            }
+            
+            display() {
+                return `
+                    <div class="student-card">
+                        <strong>${this.name}</strong> (Age: ${this.age})<br>
+                        Skills: ${this.skills.join(", ")}<br>
+                        <em>${greet(this.name)}</em>
+                    </div>
+                `;
+            }
+        }
+        
+        // Create student objects
+        const student1 = new Student("Alice Johnson", 22, ["JavaScript", "React", "UI/UX Design"]);
+        const student2 = new Student("Bob Smith", 24, ["Node.js", "Database Management", "JavaScript"]);
+        const student3 = new Student("Carol Davis", 21, ["Python", "Data Analysis", "Machine Learning"]);
+        
+        // Use of Map Object
+        const gradeMap = new Map();
+        gradeMap.set("Alice Johnson", "A");
+        gradeMap.set("Bob Smith", "B+");
+        gradeMap.set("Carol Davis", "A-");
+        
+        // Use of Set Object
+        const allSkills = new Set();
+        student1.skills.forEach(skill => allSkills.add(skill));
+        student2.skills.forEach(skill => allSkills.add(skill));
+        student3.skills.forEach(skill => allSkills.add(skill));
+        
+        // Display course information
+        document.getElementById('courseInfo').innerHTML = `
+            <p><strong>Institute:</strong> ${instituteName}</p>
+            <p><strong>Course:</strong> ${courseName}</p>
+            <p><strong>Total Subjects:</strong> ${allSubjects.length}</p>
+        `;
+        
+        // Display all subjects
+        const subjectList = document.getElementById('subjectList');
+        subjectList.innerHTML = '<div class="subject-list">';
+        allSubjects.forEach(subject => {
+            subjectList.innerHTML += `• ${subject}<br>`;
+        });
+        subjectList.innerHTML += '</div>';
+        
+        // Display student details
+        const studentDetails = document.getElementById('studentDetails');
+        studentDetails.innerHTML = student1.display() + student2.display() + student3.display();
+        
+        // Display student grades
+        const studentGrades = document.getElementById('studentGrades');
+        gradeMap.forEach((grade, name) => {
+            const gradeItem = document.createElement('div');
+            gradeItem.className = 'grade-item';
+            gradeItem.innerHTML = `
+                <span>${name}</span>
+                <span>${grade}</span>
+            `;
+            studentGrades.appendChild(gradeItem);
+        });
+        
+        // Display unique skills
+        const uniqueSkills = document.getElementById('uniqueSkills');
+        allSkills.forEach(skill => {
+            const skillTag = document.createElement('span');
+            skillTag.className = 'skill-tag';
+            skillTag.textContent = skill;
+            uniqueSkills.appendChild(skillTag);
+        });
+        
+        // Demonstrate changing a let variable
+        setTimeout(() => {
+            courseName = "Full Stack Web Development";
+            document.getElementById('courseInfo').innerHTML = `
+                <p><strong>Institute:</strong> ${instituteName}</p>
+                <p><strong>Course:</strong> ${courseName} (Updated)</p>
+                <p><strong>Total Subjects:</strong> ${allSubjects.length}</p>
+            `;
+        }, 5000);
+    </script>
+</body>
+</html>
