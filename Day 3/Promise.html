@@ -44,5 +44,109 @@
                 console.log("Enjoy your meal!");
             });
     </script>
+
+    <!-- i want to fetch data from an API with promises -->
+ <!-- Step 1: Create a function to fetch data from the API -->
+  <!-- Step 2:  calling fetch data-->
+
+    <!-- <script>
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+                let success = true; // Simulating success or failure
+                if (!success) {
+                    reject("Error: Unable to fetch data from API.");
+                    return;
+                }
+                console.log("Fetching data from API...");
+                setTimeout(() => {
+                    const data = { id: 1, name: "John Doe" }; // Simulated API response
+                    resolve(data);
+                }, 1500); // 1.5 seconds delay
+            });
+        }
+
+        // Calling fetchData function
+        fetchData()
+            .then((data) => {
+                console.log("Data received from API:", data);
+            });
+    </script> -->
+
+<!--  i want to call below API using promise for handling data asynchronously -->
+  <!-- fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json)) -->
+ <!-- fetch and promise are used together to handle asynchronous operations in a more manageable way -->
+  <!-- fetch indirectly returns a promise that resolves to the Response object representing the response to the request -->
+<!-- fetch is defined in ES6 as well as in modern browsers supporting typescript  -->
+
+    <script>
+        function fetchTodo() {
+            return fetch('https://jsonplaceholder.typicode.com/todos')
+            // fetch() returns a promise that resolves to the Response object representing the response to the request
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                });
+        }
+
+        // Calling fetchTodo function
+        fetchTodo()
+            .then(data => {
+                console.log("Todo item fetched from API:", data);
+            })
+            .catch(error => {
+                console.error("There was a problem with the fetch operation:", error);
+            });
+    </script>
+    
+    <script>
+        function loadData() {
+            fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(response => response.json())
+                .then(data => {
+                    let html = '<h2>Results:</h2>';
+                    data.slice(0, 5).forEach(item => {
+                        html += `<p>${item.id}: ${item.title} - ${item.completed ? 'Done' : 'Todo'}</p>`;
+                    });
+                    document.getElementById('data').innerHTML = html;
+                })
+                .catch(error => {
+                    document.getElementById('data').innerHTML = 'Error loading data';
+                });
+        }
+    </script>
+
+
+<script>
+    function fetchTodo() {
+            return fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                });
+        }
+
+        // Calling fetchTodo function and display data on page
+        fetchTodo()
+            .then(data => {
+                console.log("Todo item fetched from API:", data);
+                
+                // Display data in HTML
+                let html = '<h2>TODO Items from API:</h2>';
+                data.slice(0, 10).forEach(item => {
+                    html += `<p><strong>${item.id}. ${item.title}</strong> - ${item.completed ? 'Completed' : 'Pending'}</p>`;
+                });
+                document.getElementById('data').innerHTML = html;
+            })
+            .catch(error => {
+                console.error("There was a problem with the fetch operation:", error);
+                document.getElementById('data').innerHTML = '<p style="color: red;">Error loading data: ' + error.message + '</p>';
+            });
+</script>
  </body>
  </html>
