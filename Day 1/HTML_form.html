@@ -39,7 +39,7 @@
             event.preventDefault(); //prevent actual form submission
             const formData = new FormData(event.target);
             console.log('form Data');
-            for (const [name, vale] of formData) {
+            for (const [name, value] of formData) {
                 console.log('${name}: ${value}');
             }
             alert('Form Submitted');
