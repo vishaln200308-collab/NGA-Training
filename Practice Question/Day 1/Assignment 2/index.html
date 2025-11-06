@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <header>
+            <div class="logo">
+                <h1>School Logo</h1>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#" id="homeBtn">Home</a></li>
+                <li><a href="#" id="aboutBtn">About</a></li>
+                <li><a href="#" id="profileBtn">Student Profile</a></li>
+                <li><a href="#" id="timeBtn">Timetable</a></li>
+                <li><a href="#" id="contactBtn">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section active" id="welcomeSection">
+            <h2>Welcome to Student Management System</h2>
+            <p>Manage your student information easily</p>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="aboutSection">
+            <h2>About Our School</h2>
+            <p>Our school is committed to providing quality education and fostering a nurturing environment for all students.</p>
+            <p>We believe in holistic development and strive to create well-rounded individuals prepared for the challenges of the future.</p>
+        </section>
+
+        <!-- Student Profile Section -->
+<section class="profile-section" id="profileSection">
+    <h2>Student Information</h2>
+    
+    <div class="profile-content">
+        <div class="student-image">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" 
+                     alt="Student Photo" class="student-photo">
+                <div class="image-overlay">
+                    <span class="upload-text">Click to update photo</span>
+                </div>
+            </div>
+            <button class="upload-btn btn btn-primary mt-3">
+                <i class="bi bi-camera"></i> Change Photo
+            </button>
+        </div>
+                
+                <div class="student-details">
+                    <div class="detail-item">
+                        <span class="label">Name:</span>
+                        <span class="value">Smith</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Student ID:</span>
+                        <span class="value">S12345</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Grade:</span>
+                        <span class="value">10th Grade</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Class:</span>
+                        <span class="value">Class A</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Email:</span>
+                        <span class="value">johnsmith@gmail.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Phone:</span>
+                        <span class="value">+91 3258964587</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timetable Section -->
+<section class="time-table" id="timetableSection">
+    <div class="timetable-header">
+        <h2 class="text-center mb-4">Weekly Timetable</h2>
+        
+        <!-- Bootstrap Buttons for Filtering -->
+        <div class="filter-buttons mb-4">
+            <button class="btn btn-primary me-2 active" data-filter="all">All Days</button>
+            <button class="btn btn-outline-primary me-2" data-filter="monday">Monday</button>
+            <button class="btn btn-outline-primary me-2" data-filter="tuesday">Tuesday</button>
+            <button class="btn btn-outline-primary me-2" data-filter="wednesday">Wednesday</button>
+            <button class="btn btn-outline-primary me-2" data-filter="thursday">Thursday</button>
+            <button class="btn btn-outline-primary" data-filter="friday">Friday</button>
+        </div>
+    </div>
+
+    <!-- Flexbox Timetable Layout -->
+    <div class="timetable-container">
+        <!-- Time Slots Header -->
+        <div class="time-slots">
+            <div class="time-header">Time</div>
+            <div class="time-slot">9:00 - 10:00</div>
+            <div class="time-slot">10:00 - 11:00</div>
+            <div class="time-slot">11:00 - 12:00</div>
+            <div class="time-slot">12:00 - 1:00</div>
+            <div class="time-slot">1:00 - 2:00</div>
+            <div class="time-slot">2:00 - 3:00</div>
+        </div>
+
+        <!-- Days Container -->
+        <div class="days-container">
+            <!-- Monday -->
+            <div class="day-column" data-day="monday">
+                <div class="day-header">Monday</div>
+                <div class="subject math">Mathematics</div>
+                <div class="subject science">Science</div>
+                <div class="subject english">English</div>
+                <div class="subject break">Lunch Break</div>
+                <div class="subject history">History</div>
+                <div class="subject geography">Geography</div>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="day-column" data-day="tuesday">
+                <div class="day-header">Tuesday</div>
+                <div class="subject english">English</div>
+                <div class="subject math">Mathematics</div>
+                <div class="subject science">Science</div>
+                <div class="subject break">Lunch Break</div>
+                <div class="subject art">Art</div>
+                <div class="subject pe">Physical Education</div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="day-column" data-day="wednesday">
+                <div class="day-header">Wednesday</div>
+                <div class="subject science">Science</div>
+                <div class="subject history">History</div>
+                <div class="subject math">Mathematics</div>
+                <div class="subject break">Lunch Break</div>
+                <div class="subject english">English</div>
+                <div class="subject music">Music</div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="day-column" data-day="thursday">
+                <div class="day-header">Thursday</div>
+                <div class="subject geography">Geography</div>
+                <div class="subject science">Science</div>
+                <div class="subject math">Mathematics</div>
+                <div class="subject break">Lunch Break</div>
+                <div class="subject english">English</div>
+                <div class="subject computer">Computer Science</div>
+            </div>
+
+            <!-- Friday -->
+            <div class="day-column" data-day="friday">
+                <div class="day-header">Friday</div>
+                <div class="subject math">Mathematics</div>
+                <div class="subject english">English</div>
+                <div class="subject science">Science</div>
+                <div class="subject break">Lunch Break</div>
+                <div class="subject pe">Physical Education</div>
+                <div class="subject art">Art</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Period Display -->
+    <div class="current-period mt-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Current Period</h5>
+                <p class="card-text fs-4">Science - Room 201</p>
+                <p class="card-text text-muted">Time: 10:00 AM - 11:00 AM</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contactSection">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or concerns, please don't hesitate to reach out to us.</p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> info@school.edu</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Address:</strong> 123 Education Street, Learning City, LC 12345</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

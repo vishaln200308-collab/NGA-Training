@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Platform with Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blogging Platform</h1>
+            <p class="subtitle">Read posts and manage your tasks in one place</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="posts-count">0</div>
+                <div class="stat-label">Blog Posts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="todos-count">0</div>
+                <div class="stat-label">Todo Items</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-todos">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <main>
+                <section class="section">
+                    <h2 class="section-title">Latest Blog Posts</h2>
+                    <div id="posts-container">
+                        <div class="loading">Loading posts...</div>
+                    </div>
+                </section>
+            </main>
+
+            <aside>
+                <section class="section">
+                    <h2 class="section-title">Todo List</h2>
+                    <div id="todos-container">
+                        <div class="loading">Loading todos...</div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <button class="refresh-btn" id="refresh-btn">Refresh Data</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Blogging Platform &copy; 2023 | Data from JSONPlaceholder API</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

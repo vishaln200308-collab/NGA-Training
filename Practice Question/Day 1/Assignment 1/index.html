@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <header>
+            <div class="logo">
+                <h1>School Logo</h1>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" id="profileBtn">Student Profile</a></li>
+                <li><a href="#" id="TimeBtn">Timetable</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </nav>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h2>Welcome to Student Management System</h2>
+            <p>Manage your student information easily</p>
+        </section>
+
+        
+
+        <section class="profile-section" id="profileSection">
+    <h2>Student Information</h2>
+    
+    <div class="profile-content">
+        <div class="student-image">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" 
+                     alt="Student Photo" class="student-photo">
+                <div class="image-overlay">
+                    <span class="upload-text">Click to update photo</span>
+                </div>
+            </div>
+            <button class="upload-btn btn btn-primary mt-3">
+                <i class="bi bi-camera"></i> Change Photo
+            </button>
+        </div>
+                
+                <div class="student-details">
+                    <div class="detail-item">
+                        <span class="label">Name:</span>
+                        <span class="value">Smith</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Student ID:</span>
+                        <span class="value">S12345</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Grade:</span>
+                        <span class="value">10th Grade</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Class:</span>
+                        <span class="value">Class A</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Email:</span>
+                        <span class="value">johnsmith@gmail.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Phone:</span>
+                        <span class="value">+91 3258964587</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
