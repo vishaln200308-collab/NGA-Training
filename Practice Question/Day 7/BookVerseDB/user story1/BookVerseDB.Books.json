@@ -1,0 +1,258 @@
+[{
+  "_id": {
+    "$oid": "6916dff379ebbc4d3bb4c1b1"
+  },
+  "title": "Harry Potter and the Philosopher's Stone",
+  "author": "J.K. Rowling",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f678"
+  },
+  "genre": "Fantasy",
+  "publishedYear": 1997,
+  "price": 299,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 5,
+      "comment": "Excellent book!"
+    },
+    {
+      "userId": "user2",
+      "score": 4,
+      "comment": "Great storytelling"
+    },
+    {
+      "userId": "user3",
+      "score": 5,
+      "comment": "Amazing fantasy world"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916dff379ebbc4d3bb4c1b2"
+  },
+  "title": "Harry Potter and the Chamber of Secrets",
+  "author": "J.K. Rowling",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f678"
+  },
+  "genre": "Fantasy",
+  "publishedYear": 1998,
+  "price": 319,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 4,
+      "comment": "Good sequel"
+    },
+    {
+      "userId": "user4",
+      "score": 5,
+      "comment": "Loved it!"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916dff379ebbc4d3bb4c1b3"
+  },
+  "title": "A Game of Thrones",
+  "author": "George R.R. Martin",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f679"
+  },
+  "genre": "Fantasy",
+  "publishedYear": 1996,
+  "price": 499,
+  "ratings": [
+    {
+      "userId": "user2",
+      "score": 5,
+      "comment": "Epic fantasy"
+    },
+    {
+      "userId": "user3",
+      "score": 4,
+      "comment": "Great characters"
+    },
+    {
+      "userId": "user5",
+      "score": 5,
+      "comment": "Masterpiece"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916dff379ebbc4d3bb4c1b4"
+  },
+  "title": "The Shining",
+  "author": "Stephen King",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f680"
+  },
+  "genre": "Horror",
+  "publishedYear": 1977,
+  "price": 349,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 5,
+      "comment": "Scary and brilliant"
+    },
+    {
+      "userId": "user4",
+      "score": 4,
+      "comment": "Classic horror"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916dff379ebbc4d3bb4c1b5"
+  },
+  "title": "Murder on the Orient Express",
+  "author": "Agatha Christie",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f681"
+  },
+  "genre": "Mystery",
+  "publishedYear": 1934,
+  "price": 279,
+  "ratings": [
+    {
+      "userId": "user2",
+      "score": 5,
+      "comment": "Brilliant mystery"
+    },
+    {
+      "userId": "user3",
+      "score": 4,
+      "comment": "Great plot twist"
+    },
+    {
+      "userId": "user5",
+      "score": 5,
+      "comment": "Classic whodunit"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916dff379ebbc4d3bb4c1b6"
+  },
+  "title": "The Stand",
+  "author": "Stephen King",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f680"
+  },
+  "genre": "Horror",
+  "publishedYear": 1978,
+  "price": 599,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 5,
+      "comment": "Epic story"
+    },
+    {
+      "userId": "user2",
+      "score": 4,
+      "comment": "Long but worth it"
+    }
+  ]
+},
+{
+  "_id": 1,
+  "title": "Harry Potter and the Philosopher's Stone",
+  "genre": "Fantasy",
+  "publicationYear": 1997,
+  "authorId": 1,
+  "ratings": [
+    {
+      "user": "Alice Johnson",
+      "score": 5,
+      "comment": "Magical and captivating!"
+    },
+    {
+      "user": "Bob Smith",
+      "score": 4,
+      "comment": "Great start to the series"
+    },
+    {
+      "user": "David Wilson",
+      "score": 5,
+      "comment": "Timeless classic!"
+    }
+  ]
+},
+{
+  "_id": 2,
+  "title": "A Game of Thrones",
+  "genre": "Fantasy",
+  "publicationYear": 1996,
+  "authorId": 2,
+  "ratings": [
+    {
+      "user": "Carol Davis",
+      "score": 5,
+      "comment": "Epic fantasy at its best"
+    }
+  ]
+},
+{
+  "_id": 3,
+  "title": "The Martian",
+  "genre": "Science Fiction",
+  "publicationYear": 2012,
+  "authorId": 3,
+  "ratings": [
+    {
+      "user": "Alice Johnson",
+      "score": 5,
+      "comment": "Brilliant sci-fi"
+    },
+    {
+      "user": "Bob Smith",
+      "score": 4,
+      "comment": "Very realistic science"
+    }
+  ]
+},
+{
+  "_id": 4,
+  "title": "Harry Potter and the Chamber of Secrets",
+  "genre": "Fantasy",
+  "publicationYear": 1998,
+  "authorId": 1,
+  "ratings": [
+    {
+      "user": "Carol Davis",
+      "score": 4,
+      "comment": "Loved the mystery"
+    }
+  ]
+},
+{
+  "_id": 5,
+  "title": "Project Hail Mary",
+  "genre": "Science Fiction",
+  "publicationYear": 2021,
+  "authorId": 3,
+  "ratings": [
+    {
+      "user": "Alice Johnson",
+      "score": 5,
+      "comment": "Even better than The Martian!"
+    }
+  ]
+},
+{
+  "_id": 6,
+  "title": "Fire & Blood",
+  "genre": "Fantasy",
+  "publicationYear": 2018,
+  "authorId": 2,
+  "ratings": []
+}]

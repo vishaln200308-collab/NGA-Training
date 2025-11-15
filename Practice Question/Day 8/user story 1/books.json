@@ -1,0 +1,165 @@
+[{
+  "_id": {
+    "$oid": "6916ebad79ebbc4d3bb4c1d8"
+  },
+  "title": "Harry Potter and the Philosopher's Stone",
+  "author": "J.K. Rowling",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f678"
+  },
+  "genre": "Fantasy",
+  "publishedYear": 1997,
+  "price": 299,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 5,
+      "comment": "Excellent book!"
+    },
+    {
+      "userId": "user2",
+      "score": 4,
+      "comment": "Great storytelling"
+    },
+    {
+      "userId": "user3",
+      "score": 5,
+      "comment": "Amazing fantasy world"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebad79ebbc4d3bb4c1d9"
+  },
+  "title": "Harry Potter and the Chamber of Secrets",
+  "author": "J.K. Rowling",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f678"
+  },
+  "genre": "Fantasy",
+  "publishedYear": 1998,
+  "price": 319,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 4,
+      "comment": "Good sequel"
+    },
+    {
+      "userId": "user4",
+      "score": 5,
+      "comment": "Loved it!"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebad79ebbc4d3bb4c1da"
+  },
+  "title": "A Game of Thrones",
+  "author": "George R.R. Martin",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f679"
+  },
+  "genre": "Fantasy",
+  "publishedYear": 1996,
+  "price": 499,
+  "ratings": [
+    {
+      "userId": "user2",
+      "score": 5,
+      "comment": "Epic fantasy"
+    },
+    {
+      "userId": "user3",
+      "score": 4,
+      "comment": "Great characters"
+    },
+    {
+      "userId": "user5",
+      "score": 5,
+      "comment": "Masterpiece"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebad79ebbc4d3bb4c1db"
+  },
+  "title": "The Shining",
+  "author": "Stephen King",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f680"
+  },
+  "genre": "Horror",
+  "publishedYear": 1977,
+  "price": 349,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 5,
+      "comment": "Scary and brilliant"
+    },
+    {
+      "userId": "user4",
+      "score": 4,
+      "comment": "Classic horror"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebad79ebbc4d3bb4c1dc"
+  },
+  "title": "Murder on the Orient Express",
+  "author": "Agatha Christie",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f681"
+  },
+  "genre": "Mystery",
+  "publishedYear": 1934,
+  "price": 279,
+  "ratings": [
+    {
+      "userId": "user2",
+      "score": 5,
+      "comment": "Brilliant mystery"
+    },
+    {
+      "userId": "user3",
+      "score": 4,
+      "comment": "Great plot twist"
+    },
+    {
+      "userId": "user5",
+      "score": 5,
+      "comment": "Classic whodunit"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebad79ebbc4d3bb4c1dd"
+  },
+  "title": "The Stand",
+  "author": "Stephen King",
+  "authorId": {
+    "$oid": "651a12b5c8a1b2c3d4e5f680"
+  },
+  "genre": "Horror",
+  "publishedYear": 1978,
+  "price": 599,
+  "ratings": [
+    {
+      "userId": "user1",
+      "score": 5,
+      "comment": "Epic story"
+    },
+    {
+      "userId": "user2",
+      "score": 4,
+      "comment": "Long but worth it"
+    }
+  ]
+}]

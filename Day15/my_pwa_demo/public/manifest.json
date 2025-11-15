@@ -1,0 +1,48 @@
+{
+  "short_name": "My PWA Demo",
+  "name": "My Progressive Web App Demo",
+  "description": "A sample Progressive Web Application built with React",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+//   "screenshots": [
+//     {
+//       "src": "screenshot-wide.png",
+//       "sizes": "1280x720",
+//       "type": "image/png",
+//       "form_factor": "wide",
+//       "label": "Home page in desktop browser"
+//     },
+//     {
+//       "src": "screenshot-narrow.png",
+//       "sizes": "375x667",
+//       "type": "image/png",
+//       "form_factor": "narrow",
+//       "label": "Home page on mobile device"
+//     }
+//   ],
+//   "categories": ["business", "productivity", "utilities"]
+
+}

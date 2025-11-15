@@ -1,0 +1,61 @@
+BOOKVERSE DB MONGODB ASSIGNMENT - QUERY SUMMARY
+
+DATABASE SETUP:
+use BookVerseDB
+
+USER STORY 1 - DATA MODELING:
+
+Authors Collection:
+db.Authors.insertMany([
+  {_id:1,name:"J.K.Rowling",nationality:"British",birthYear:1965},
+  {_id:2,name:"George R.R.Martin",nationality:"American",birthYear:1948},
+  {_id:3,name:"Andy Weir",nationality:"American",birthYear:1972}
+])
+
+Users Collection:
+db.Users.insertMany([
+  {_id:1,name:"Alice Johnson",email:"alice@email.com",joinDate:new Date("2023-01-15")},
+  {_id:2,name:"Bob Smith",email:"bob@email.com",joinDate:new Date("2023-06-20")},
+  {_id:3,name:"Carol Davis",email:"carol@email.com",joinDate:new Date("2024-01-10")}
+])
+
+Books Collection:
+db.Books.insertMany([
+  {_id:1,title:"Harry Potter and the Philosopher's Stone",genre:"Fantasy",publicationYear:1997,authorId:1,ratings:[{user:"Alice Johnson",score:5,comment:"Magical!"},{user:"Bob Smith",score:4,comment:"Great series"}]},
+  {_id:2,title:"A Game of Thrones",genre:"Fantasy",publicationYear:1996,authorId:2,ratings:[{user:"Carol Davis",score:5,comment:"Epic fantasy"}]},
+  {_id:3,title:"The Martian",genre:"Science Fiction",publicationYear:2011,authorId:3,ratings:[{user:"Alice Johnson",score:5,comment:"Brilliant sci-fi"},{user:"Bob Smith",score:4,comment:"Realistic science"}]},
+  {_id:4,title:"Harry Potter and the Chamber of Secrets",genre:"Fantasy",publicationYear:1998,authorId:1,ratings:[{user:"Carol Davis",score:4,comment:"Loved mystery"}]},
+  {_id:5,title:"Project Hail Mary",genre:"Science Fiction",publicationYear:2021,authorId:3,ratings:[{user:"Alice Johnson",score:5,comment:"Better than The Martian!"}]}
+])
+
+USER STORY 2 - CRUD OPERATIONS:
+
+Task 1 - Insert New Documents:
+db.Users.insertOne({_id:4,name:"David Wilson",email:"david@email.com",joinDate:new Date("2024-02-01")})
+db.Books.insertOne({_id:6,title:"Fire & Blood",genre:"Fantasy",publicationYear:2018,authorId:2,ratings:[]})
+
+Task 2 - Science Fiction Books:
+db.Books.find({genre:"Science Fiction"})
+
+Task 3 - Update Publication Year:
+db.Books.updateOne({_id:3},{$set:{publicationYear:2012}})
+
+Task 4 - Delete User:
+db.Users.deleteOne({_id:2})
+
+Task 5 - Add Rating:
+db.Books.updateOne({_id:1},{$push:{ratings:{user:"David Wilson",score:5,comment:"Timeless classic!"}}})
+
+USER STORY 3 - QUERYING AND FILTERING:
+
+Task 1 - Books After 2015:
+db.Books.find({publicationYear:{$gt:2015}})
+
+Task 2 - Fantasy Authors:
+db.Books.aggregate([{$match:{genre:"Fantasy"}},{$group:{_id:"$authorId"}},{$lookup:{from:"Authors",localField:"_id",foreignField:"_id",as:"author"}},{$unwind:"$author"},{$project:{"author.name":1,"author.nationality":1}}])
+
+Task 3 - Recent Users:
+var sixMonthsAgo=new Date();sixMonthsAgo.setMonth(sixMonthsAgo.getMonth()-6);db.Users.find({joinDate:{$gte:sixMonthsAgo}})
+
+Task 4 - High Rated Books:
+db.Books.aggregate([{$addFields:{avgRating:{$avg:"$ratings.score"}}},{$match:{avgRating:{$gt:4}}},{$project:{title:1,genre:1,avgRating:1,ratings:1}}])

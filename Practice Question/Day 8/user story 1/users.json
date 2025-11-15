@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "6916ebc479ebbc4d3bb4c1e0"
+  },
+  "userId": "user1",
+  "name": "Alice Johnson",
+  "email": "alice@email.com",
+  "joinedDate": {
+    "$date": "2023-01-15T00:00:00.000Z"
+  },
+  "preferences": [
+    "Fantasy",
+    "Horror"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebc479ebbc4d3bb4c1e1"
+  },
+  "userId": "user2",
+  "name": "Bob Smith",
+  "email": "bob@email.com",
+  "joinedDate": {
+    "$date": "2023-02-20T00:00:00.000Z"
+  },
+  "preferences": [
+    "Mystery",
+    "Fantasy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6916ebc479ebbc4d3bb4c1e2"
+  },
+  "userId": "user3",
+  "name": "Carol Davis",
+  "email": "carol@email.com",
+  "joinedDate": {
+    "$date": "2023-03-10T00:00:00.000Z"
+  },
+  "preferences": [
+    "Fantasy"
+  ]
+}]
